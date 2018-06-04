@@ -52,7 +52,7 @@ subtest "coerce_to=Time::Moment" => sub {
 subtest "coerce_to=float(epoch)" => sub {
     test_needs "DateTime::Format::Alami::EN";
 
-    my $c = gen_coercer(type=>"date", coerce_to=>"float(epoch)", coerce_rules=>["str_alami"]);
+    my $c = gen_coercer(type=>"date", coerce_to=>"float(epoch)", coerce_rules=>["str_alami_en"]);
 
     my $d = $c->("may 19, 2016");
     ok(!ref($d));
